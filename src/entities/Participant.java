@@ -1,7 +1,6 @@
-package projet;
+package entities;
 
 import exceptions.InvalidStringException;
-import exceptions.InvalidTimeException;
 import exceptions.NegativeNumberException;
 
 import java.util.Scanner;
@@ -74,6 +73,11 @@ public abstract class Participant {
         if(classement>1)
             return classement+"ème";
         return "1er";
+    }
+
+    public static void ajouter(Participant p){
+        Participant.participant[Participant.index]=p;
+        Participant.index++;
     }
 
     public static Participant[] superieur(){

@@ -1,4 +1,4 @@
-package projet;
+package entities;
 
 public interface EmployeEquipe {
     public Integer getNombreEvenement();

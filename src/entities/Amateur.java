@@ -1,17 +1,11 @@
-package projet;
+package entities;
 
 import exceptions.InvalidStringException;
-import exceptions.InvalidTimeException;
 import exceptions.NegativeNumberException;
 
 public class Amateur extends Participant{
-    public Amateur(String nom, Integer age, Integer numero, Integer classement, Temps temps) throws NegativeNumberException, InvalidStringException, InvalidTimeException {
+    public Amateur(String nom, Integer age, Integer numero, Integer classement, Temps temps) throws NegativeNumberException, InvalidStringException{
         super(nom,age,numero,classement,temps);
-    }
-
-    public static void ajouterAmateur(Amateur amateur){
-        Participant.participant[Participant.index]=amateur;
-        Participant.index++;
     }
 
     public static void afficherAmateur(){

@@ -1,27 +1,26 @@
-package projet;
+package main;
 
-import exceptions.InvalidStringException;
-import exceptions.InvalidTimeException;
-import exceptions.NegativeNumberException;
+import entities.*;
+import exceptions.*;
 
 public class TestMain {
 
     public static void main(String[] args) throws NegativeNumberException, InvalidStringException, InvalidTimeException {
 
-        Amateur.ajouterAmateur(new Amateur("Lobna",29,125478,17,new Temps(90,5)));
+        Participant.ajouter(new Amateur("Lobna",29,125478,17,new Temps(90,5)));
 
-        Athlete.ajouterAthlete(new Athlete("Mohamed",23,547064,1,new Temps(64),12));
+        Participant.ajouter(new Athlete("Mohamed",23,547064,1,new Temps(64),12));
 
-        Athlete.ajouterAthlete(new Athlete("Lotfi",32,547065,10,new Temps(84),5));
+        Participant.ajouter(new Athlete("Lotfi",32,547065,10,new Temps(84),5));
 
-        Athlete.ajouterAthlete(new Athlete("Mohamed",21,547069,12,new Temps(94),10));
+        Participant.ajouter(new Athlete("Mohamed",21,547069,12,new Temps(94),10));
 
-        Amateur.ajouterAmateur(new Amateur("Sonia",19,125479,11,new Temps(60,0)));
+        Participant.ajouter(new Amateur("Sonia",19,125479,11,new Temps(60,0)));
 
-        Amateur.ajouterAmateur(new Amateur("Nabiha",36,125471,19,new Temps(0,15,240)));
+        Participant.ajouter(new Amateur("Nabiha",36,125471,19,new Temps(0,15,240)));
 
         EmployeEquipe employeEquipe = new Athlete("Emna",21,547074,2,new Temps(70),35);
-        Athlete.ajouterAthlete( (Athlete) employeEquipe);
+        Participant.ajouter( (Athlete) employeEquipe);
 
 
 
