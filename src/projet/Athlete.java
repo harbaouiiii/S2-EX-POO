@@ -1,15 +1,13 @@
 package projet;
 
-import exceptions.InvalidStringException;
-import exceptions.InvalidTimeException;
-import exceptions.NegativeNumberException;
+import exceptions.*;
 
 public class Athlete extends Participant implements EmployeEquipe {
     private Integer nombreEvenement;
     //private Integer[] tempsRealise;
     //private Integer index = 0;
 
-    public Athlete(String nom, Integer age, Integer numero, Integer classement, Temps temps,Integer nombreEvenement) throws NegativeNumberException, InvalidStringException, InvalidTimeException {
+    public Athlete(String nom, Integer age, Integer numero, Integer classement, Temps temps,Integer nombreEvenement) throws NegativeNumberException, InvalidStringException {
         super(nom,age,numero,classement,temps);
         if(nombreEvenement>0){
             this.nombreEvenement=nombreEvenement;
@@ -55,7 +53,6 @@ public class Athlete extends Participant implements EmployeEquipe {
     public void afficher(){
         super.afficher();
         System.out.println(", Nombre des evenements: "+nombreEvenement);
-        System.out.println("Liste des temps déjà réalisés: {4,3,2}");
         //getTempsRealise();
     }
 }

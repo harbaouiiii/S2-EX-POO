@@ -14,7 +14,7 @@ public abstract class Participant {
     public static Participant[] participant = new Participant[100];
     public static int index = 0 ;
 
-    public Participant(String nom,Integer age,Integer numero,Integer classement,Temps temps) throws NegativeNumberException, InvalidStringException, InvalidTimeException {
+    public Participant(String nom,Integer age,Integer numero,Integer classement,Temps temps) throws NegativeNumberException, InvalidStringException {
         if(valid(nom)){
             this.nom=nom;
         } else{
