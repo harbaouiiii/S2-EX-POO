@@ -48,7 +48,7 @@ public class Athlete extends Participant implements EmployeEquipe {
     }
 
     public void afficher(){
-        super.afficher();
+        System.out.print("Nom: "+super.getNom()+", Age: "+super.getAge()+"ans, Numéro: "+super.getNumero()+", Classement: "+afficherClassement()+", Temps: "+super.getTemps().toString());
         System.out.println(", Nombre des evenements: "+nombreEvenement);
         //getTempsRealise();
     }

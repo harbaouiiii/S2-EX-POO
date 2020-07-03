@@ -25,7 +25,11 @@ public class TestMain {
 
 
         System.out.println("**** Liste des amateurs ****");
-        Amateur.afficherAmateur();
+        for (Participant p : Participant.participant){
+            if(p instanceof Amateur){
+                p.afficher();
+            }
+        }
         System.out.println();
 
         System.out.println("**** Liste des athlètes qui ont fait plus de 10 compétitions ****");

@@ -8,17 +8,9 @@ public class Amateur extends Participant{
         super(nom,age,numero,classement,temps);
     }
 
-    public static void afficherAmateur(){
-        for (Participant p : Participant.participant){
-            if(p instanceof Amateur){
-                p.afficher();
-            }
-        }
-    }
-
     @Override
     public void afficher(){
-        super.afficher();
+        System.out.print("Nom: "+super.getNom()+", Age: "+super.getAge()+"ans, Numéro: "+super.getNumero()+", Classement: "+afficherClassement()+", Temps: "+super.getTemps().toString());
         System.out.println();
     }
 }

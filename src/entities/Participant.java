@@ -76,8 +76,8 @@ public abstract class Participant {
     }
 
     public static void ajouter(Participant p){
-        Participant.participant[Participant.index]=p;
-        Participant.index++;
+        participant[index]=p;
+        index++;
     }
 
     public static Participant[] superieur(){
@@ -95,19 +95,6 @@ public abstract class Participant {
         return part;
     }
 
-    public static Boolean present(Integer numero){
-        for(Participant p : participant){
-            if(p.getNumero()==numero){
-                return Boolean.TRUE;
-            }
-        }
-        return Boolean.FALSE;
-    }
-
-    public void afficher(){
-        System.out.print("Nom: "+nom+", Age: "+age+"ans, Numéro: "+numero+", Classement: "+afficherClassement()+", Temps: "+temps.toString());
-    }
-
     public Boolean valid(String s){
         if(!s.isEmpty()){
             for(Character c : s.toCharArray()){
@@ -119,4 +106,15 @@ public abstract class Participant {
         }
         return Boolean.FALSE;
     }
+
+    public static Boolean present(Integer numero){
+        for(Participant p : participant){
+            if(p.getNumero()==numero){
+                return Boolean.TRUE;
+            }
+        }
+        return Boolean.FALSE;
+    }
+
+    public abstract void afficher();
 }
